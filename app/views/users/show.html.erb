@@ -7,8 +7,7 @@
 <%= gravatar_for @user %>
         <%= @user.name %>
      <%= form_for @user, html: { multipart: true } do |f| %>
-  <%= form.file_field :image %>
-<% end %>
+    <%= f.file_field :image %>
       <%= image_tag @user.image.url(:medium) %>
 </div>
   
