@@ -3,3 +3,12 @@
   <h1>Personal Profile Page</h1>
 </div>
 <h1>Contact Information</h1>
+<div>
+<%= gravatar_for @user %>
+        <%= @user.name %>
+      <%= f.file_field : image %>
+      <%= image_tag @user.image.url(:medium) %>
+</div>
+  
+
+  
