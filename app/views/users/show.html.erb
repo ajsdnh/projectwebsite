@@ -7,10 +7,10 @@
     
 <%= gravatar_for @user %>
         <%= @user.name %>
-    <%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+    <%= form_for(@user) do |f| %>
      <%= render 'shared/error_messages' %>
-  <%= form.file_field :image %>
-  <%= form.submit "Save changes", class: "btn btn-primary" %>
+  <%= f.file_field :image %>
+  <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
       <%= image_tag @user.image.url(:medium) %>
 </div>
