@@ -30,11 +30,11 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       render 'new'
-    end
+    end 
   end
 
   def edit
-    @post = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :update,
+                                   :password_confirmation,
                                    :image)
     end
 
