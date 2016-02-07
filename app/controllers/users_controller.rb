@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-  
+    @post = User.find(params[:id])
   end
 
   def update
@@ -51,7 +51,8 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :image)
+                                   :password_confirmation, :update,
+                                   :image)
     end
 
     # Before filters
