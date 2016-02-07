@@ -6,7 +6,9 @@
 <div>
 <%= gravatar_for @user %>
         <%= @user.name %>
-      <%= f.file_field : image %>
+     <%= form_for @user, html: { multipart: true } do |f| %>
+  <%= form.file_field :image %>
+<% end %>
       <%= image_tag @user.image.url(:medium) %>
 </div>
   
