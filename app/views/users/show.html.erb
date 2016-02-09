@@ -6,10 +6,12 @@
 
 
 <div>
-    <div id="profile_image">
+    
        <%= gravatar_for @user, size:100  %>
-       </div>
-        <%= @user.name %>
+       
+       
+       <h2><%= @user.name %></h2>
+       
      <%= form_for(@user) do |f| %>
      <%= render 'shared/error_messages' %>
   <%= f.file_field :image %>
