@@ -7,7 +7,7 @@
 
 <div>
     <div id="profile_image">
-       <%= gravatar_for @user %>
+       <%= gravatar_for @user, size:100  %>
        </div>
         <%= @user.name %>
      <%= form_for(@user) do |f| %>
