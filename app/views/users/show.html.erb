@@ -18,9 +18,9 @@
   
 
 <% end %>
-<p>Enter the video URL</p>
-<%= text_field_tag :text1 %>    
-<iframe width="680" height="550" src="https://www.youtube.com/embed/GGW2NvoIqlI" frameborder="0" allowfullscreen></iframe>
+<%= label_tag(:text1, "Please enter the video URL") %>
+<%= text_field_tag :text1 %>  
+<iframe width="680" height="550" src="text1" frameborder="0" allowfullscreen></iframe>
 <%= f.submit "Save changes", class: "btn btn-primary" %>
 <div class="row">
   <div class="col-sm-6 col-md-4">
