@@ -9,10 +9,11 @@
     
        <%= gravatar_for @user, size:100  %>
        <h2 id="username">User Name: <%= @user.name %></h2>
-       <h2 id="username">Email Address: <%= @user.name %></h2>
+       <h2 id="username">Email Address: <%= @user.email %></h2>
        
      <%= form_for(@user) do |f| %>
      <%= render 'shared/error_messages' %>
+  <%= f.file_field :image %>
   <%= f.file_field :image %>
   
   <%= f.submit "Save changes", class: "btn btn-primary" %>
