@@ -4,17 +4,6 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
   
-  def deliver
-
-   recipient = User.find_by_username(params[:recipient])
-   subject = params[:subject]
-   body = params[:body]
-
-   current_user.send_message(recipient, body, subject)
-    redirect_to :controller => 'messages', :action => 'received' 
-    flash[:notice] = "message sent!"
-
-  end
   
   def index
     @users = User.paginate(page: params[:page])
