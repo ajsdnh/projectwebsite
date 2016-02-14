@@ -11,12 +11,12 @@
        <h2 id="username">User Name: <%= @user.name %></h2>
        <h2 id="username">Email Address: <%= @user.email %></h2>
        
-     <%= form_for(@user) do |f| %>
-     <%= render 'shared/error_messages' %>
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %>
 
 <%= f.file_field :image %>
-<%= f.label :name %>
-<%= f.text_field :name, class: 'form-control' %>
+<%= form_for @thing do |f| %>
+<%= text_field_tag :randomInput %>
 <iframe width="680" height="550" src="video" frameborder="0" allowfullscreen></iframe>
 <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
