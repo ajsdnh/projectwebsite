@@ -11,10 +11,11 @@
        <h2 id="username">User Name: <%= @user.name %></h2>
        <h2 id="username">Email Address: <%= @user.email %></h2>
        
-<%= form_for(@user) do |f| %>
+       
+<%=form_for :user, url: url_for( :controller => :messages, :action => :deliver ) do |f| %>
 <%= render 'shared/error_messages' %>
 <%= f.file_field :image %>
-<%= f.text_field :name %>
+<%= f.text_field :subject %>
 <iframe width="680" height="550" src="subject" frameborder="0" allowfullscreen></iframe>
 <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
