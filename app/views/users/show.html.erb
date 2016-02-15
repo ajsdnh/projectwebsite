@@ -5,10 +5,6 @@
 <div class="page-header">
   <h1>Profile Page</h1>
 </div>
-
-
-
-    
        <%= gravatar_for @user, size:100  %>
        <h2 id="username">User Name: <%= @user.name %></h2>
        <h2 id="username">Email Address: <%= @user.email %></h2>
@@ -17,7 +13,7 @@
 
 <%= f.file_field :image %>
 
-<iframe width="680" height="550" src="profile_params[‘video’]" frameborder="0" allowfullscreen></iframe>
+<iframe width="680" height="550" src="https://www.youtube.com/watch?v=GGW2NvoIqlI" frameborder="0" allowfullscreen></iframe>
 <%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
 
