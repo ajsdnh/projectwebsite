@@ -1,7 +1,5 @@
 <% provide(:title, @user.name) %>
 <%= stylesheet_link_tag "profile.css" %>
-<%= form_for(@user) do |f| %>
-<%= render 'shared/error_messages' %>
 <div class="page-header">
   <h1>Profile Page</h1>
 </div>
@@ -9,13 +7,15 @@
        <h2 id="username">User Name: <%= @user.name %></h2>
        <h2 id="username">Email Address: <%= @user.email %></h2>
        
-       
+ <%= link_to "Add new post", new_post_path %>
 
-<%= f.file_field :image %>
+<br>
 
-<iframe width="640" height="480" src="https://www.youtube.com/embed/UHxH85oC8Wc" frameborder="0" allowfullscreen></iframe>
-<%= f.submit "Save changes", class: "btn btn-primary" %>
+<% @posts.each do |post| %>
+	<%= post.title %>
+	<%= image_tag post.image.url(:med) %>
 <% end %>
+
 
 
 <div class="row">

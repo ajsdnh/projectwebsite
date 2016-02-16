@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk', '~> 1.5.7'
 gem 'rails',                   '4.2.2'
 gem 'bcrypt',                  '3.1.7'
 gem 'faker',                   '1.4.2'
